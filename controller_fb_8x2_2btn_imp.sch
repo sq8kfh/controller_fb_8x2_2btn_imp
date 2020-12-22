@@ -5,9 +5,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Controller front board with 2 button and OLED 16x2"
-Date "2020-10-29"
-Rev "0.1"
+Title "Controller front board with 2 button, encoder and OLED 8x2"
+Date "2020-12-22"
+Rev "0.2"
 Comp "SQ8KFH"
 Comment1 ""
 Comment2 ""
@@ -478,10 +478,8 @@ F 3 "~" H 9300 4750 50  0001 C CNN
 	1    9300 4750
 	0    1    1    0   
 $EndComp
-Text Label 3400 4600 2    50   ~ 0
-PC0(INT3)
-Wire Wire Line
-	2950 4600 3400 4600
+Text Label 3400 4500 2    50   ~ 0
+PD0
 Text Label 3400 4100 2    50   ~ 0
 PB3
 Wire Wire Line
@@ -640,22 +638,20 @@ Wire Wire Line
 	7050 4250 7050 4300
 Text Label 6650 4600 0    50   ~ 0
 PB5(INT2)
-Text Label 6650 4800 0    50   ~ 0
-PC0(INT3)
 Wire Wire Line
 	6650 4800 7050 4800
 Connection ~ 7050 4800
 Wire Wire Line
 	6650 4600 7350 4600
-Text Label 9650 4650 2    50   ~ 0
+Text Label 9650 5500 2    50   ~ 0
 PB3
-Text Label 9650 4750 2    50   ~ 0
+Text Label 9650 4650 2    50   ~ 0
 PB4
 Wire Wire Line
 	9650 4650 9400 4650
 Wire Wire Line
 	9400 4750 9650 4750
-Text Label 9650 5500 2    50   ~ 0
+Text Label 6650 4800 0    50   ~ 0
 PB6
 $Comp
 L Device:R_Small R9
@@ -693,5 +689,9 @@ Connection ~ 8800 4850
 Wire Wire Line
 	9650 5500 9300 5500
 Connection ~ 9300 5500
-NoConn ~ 2950 4500
+NoConn ~ 2950 4600
+Wire Wire Line
+	2950 4500 3400 4500
+Text Label 9650 4750 2    50   ~ 0
+PD0
 $EndSCHEMATC
